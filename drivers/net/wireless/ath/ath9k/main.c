@@ -1126,7 +1126,7 @@ void ath9k_calculate_summary_state(struct ath_softc *sc,
 	ath9k_hw_setopmode(ah);
 
 	ctx->switch_after_beacon = false;
-	if ((iter_data.nstations + iter_data.nadhocs + iter_data.nmeshes) > 0)
+	if ((iter_data.nstations + iter_data.nadhocs + iter_data.nocbs + iter_data.nmeshes) > 0)
 		ah->imask |= ATH9K_INT_TSFOOR;
 	else {
 		ah->imask &= ~ATH9K_INT_TSFOOR;

@@ -326,6 +326,7 @@ void ath9k_ani_reset(struct ath_hw *ah, bool is_scanning)
 
 	if (is_scanning ||
 	    (ah->opmode != NL80211_IFTYPE_STATION &&
+			 ah->opmode != NL80211_IFTYPE_OCB &&
 	     ah->opmode != NL80211_IFTYPE_ADHOC)) {
 		/*
 		 * If we're scanning or in AP mode, the defaults (ini)
@@ -432,7 +433,7 @@ void ath9k_hw_ani_monitor(struct ath_hw *ah, struct ath9k_channel *chan)
 			aniState->ofdmsTurn = true;
 		} else
 			return;
-			
+
 		ath9k_ani_restart(ah);
 	}
 }
