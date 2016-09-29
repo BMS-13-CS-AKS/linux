@@ -55,11 +55,11 @@ static int __ath_regd_init(struct ath_regulatory *reg);
 				ATH9K_2GHZ_CH14
 
 #define ATH9K_5GHZ_ALL		ATH9K_5GHZ_5150_5350, \
-				ATH9K_5GHZ_5470_5850
+				ATH9K_5GHZ_5470_5925
 
 /* This one skips what we call "mid band" */
 #define ATH9K_5GHZ_NO_MIDBAND	ATH9K_5GHZ_5150_5350, \
-				ATH9K_5GHZ_5725_5850
+				ATH9K_5GHZ_5725_5925
 
 /* Can be used for:
  * 0x60, 0x61, 0x62 */
